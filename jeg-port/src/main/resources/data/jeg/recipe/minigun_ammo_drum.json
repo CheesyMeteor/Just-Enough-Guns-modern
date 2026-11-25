@@ -1,0 +1,6 @@
+{
+  "type": "jeg:magazine_gated",
+  "pattern": ["GGG","GMG","GGG"],
+  "key": {"G":{"item":"jeg:gunmetal_ingot"},"M":{"item":"jeg:pistol_drum_magazine"}},
+  "result": { "id": "jeg:minigun_ammo_drum" }
+}

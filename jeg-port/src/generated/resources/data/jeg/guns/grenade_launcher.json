@@ -1,0 +1,63 @@
+{
+  "display": {
+    "flash": {
+      "size": 1.0,
+      "yOffset": 4.86,
+      "zOffset": -7.0
+    }
+  },
+  "general": {
+    "alwaysSpread": true,
+    "canBeBlueprinted": false,
+    "drawTimer": 20,
+    "fireMode": "jeg:semi_automatic",
+    "gripType": "jeg:two_handed",
+    "rate": 20,
+    "recoilAngle": 3.0,
+    "recoilKick": 0.25,
+    "spread": 2.0
+  },
+  "modules": {
+    "attachments": {
+      "scope": {
+        "yOffset": 4.5
+      },
+      "underBarrel": {
+        "yOffset": 2.5,
+        "zOffset": -2.5
+      }
+    },
+    "zoom": {
+      "fovModifier": 0.6,
+      "yOffset": 3.61,
+      "zOffset": 2.0
+    }
+  },
+  "projectile": {
+    "advantage": "jeg:very_heavy",
+    "damage": 25.0,
+    "gravity": true,
+    "headshotMultiplier": 1.5,
+    "item": "jeg:grenade",
+    "life": 200,
+    "size": 0.05,
+    "speed": 3.0,
+    "trailColor": -256,
+    "trailLengthMultiplier": 2.0,
+    "visible": true
+  },
+  "reloads": {
+    "additionalReloadTimer": 0,
+    "maxAmmo": 1,
+    "reloadTimer": 42,
+    "reloadType": "jeg:mag_fed"
+  },
+  "sounds": {
+    "ejectorPull": "jeg:item.combat_rifle.ejector_pull",
+    "ejectorRelease": "jeg:item.combat_rifle.ejector_release",
+    "fire": "jeg:item.grenade_launcher.fire",
+    "reloadEnd": "jeg:item.combat_rifle.reload_ejector",
+    "reloadLoad": "jeg:item.combat_rifle.reload_magazine_out",
+    "reloadStart": "jeg:item.combat_rifle.reload_magazine_in"
+  }
+}

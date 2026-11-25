@@ -1,0 +1,57 @@
+{
+  "display": {
+    "flash": {
+      "size": 0.8,
+      "yOffset": 4.1,
+      "zOffset": -11.8
+    }
+  },
+  "general": {
+    "alwaysSpread": true,
+    "canBeBlueprinted": false,
+    "drawTimer": 25,
+    "fireMode": "jeg:automatic",
+    "gripType": "jeg:two_handed",
+    "overheatTimer": 150,
+    "projectileAmount": 3,
+    "rate": 1,
+    "recoilAngle": 0.5,
+    "recoilKick": 0.15,
+    "spread": 20.0,
+    "witheredDisabled": true
+  },
+  "modules": {
+    "zoom": {
+      "fovModifier": 0.6,
+      "yOffset": 5.71,
+      "zOffset": -1.75
+    }
+  },
+  "projectile": {
+    "advantage": "jeg:none",
+    "collateral": true,
+    "damage": 3.0,
+    "headshotMultiplier": 1.5,
+    "hideTrail": true,
+    "item": "minecraft:fire_charge",
+    "life": 7,
+    "size": 0.05,
+    "speed": 2.0,
+    "trailColor": 16765577
+  },
+  "reloads": {
+    "additionalReloadTimer": 30,
+    "maxAmmo": 200,
+    "reloadItem": "minecraft:lava_bucket",
+    "reloadTimer": 120,
+    "reloadType": "jeg:single_item"
+  },
+  "sounds": {
+    "ejectorPull": "minecraft:block.iron_trapdoor.open",
+    "ejectorRelease": "minecraft:block.iron_trapdoor.close",
+    "fire": "minecraft:item.firecharge.use",
+    "reloadEnd": "jeg:item.combat_rifle.reload_ejector",
+    "reloadLoad": "minecraft:entity.item_frame.remove_item",
+    "reloadStart": "minecraft:entity.item_frame.remove_item"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "display": {
+    "flash": {
+      "size": 1.3,
+      "yOffset": 4.695,
+      "zOffset": -8.015
+    }
+  },
+  "general": {
+    "alwaysSpread": true,
+    "canBeBlueprinted": false,
+    "drawTimer": 40,
+    "fireMode": "jeg:semi_automatic",
+    "fireTimer": 7,
+    "gripType": "jeg:bazooka",
+    "infinityDisabled": true,
+    "rate": 100,
+    "recoilAngle": 7.0,
+    "recoilKick": 0.25,
+    "shooterPushback": -1.0,
+    "spread": 1.0
+  },
+  "modules": {
+    "zoom": {
+      "fovModifier": 0.6,
+      "xOffset": 2.8,
+      "yOffset": 3.4,
+      "zOffset": -1.75
+    }
+  },
+  "projectile": {
+    "advantage": "jeg:very_heavy",
+    "damage": 28.0,
+    "ejectsCasing": true,
+    "gravity": true,
+    "headshotMultiplier": 1.5,
+    "hideTrail": true,
+    "item": "jeg:rocket",
+    "life": 600,
+    "size": 0.05,
+    "speed": 5.0,
+    "trailLengthMultiplier": 2.0
+  },
+  "reloads": {
+    "additionalReloadTimer": 14,
+    "maxAmmo": 1,
+    "reloadTimer": 45,
+    "reloadType": "jeg:manual"
+  },
+  "sounds": {
+    "ejectorPull": "jeg:item.combat_rifle.ejector_pull",
+    "ejectorRelease": "jeg:item.combat_rifle.ejector_release",
+    "enchantedFire": "jeg:item.rocket_launcher.fire",
+    "fire": "jeg:item.rocket_launcher.fire",
+    "reloadEnd": "jeg:item.rocket_launcher.lid_close",
+    "reloadLoad": "jeg:item.rocket_launcher.rocket_in",
+    "reloadStart": "jeg:item.rocket_launcher.lid_open",
+    "silencedFire": "jeg:item.rocket_launcher.fire"
+  }
+}

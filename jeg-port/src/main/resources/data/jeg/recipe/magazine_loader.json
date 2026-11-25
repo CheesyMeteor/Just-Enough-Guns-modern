@@ -1,0 +1,15 @@
+{
+  "type": "jeg:magazine_gated",
+  "pattern": [
+    "GHG",
+    "RCR",
+    "GHG"
+  ],
+  "key": {
+    "G": { "item": "jeg:gunmetal_ingot" },
+    "H": { "item": "minecraft:hopper" },
+    "R": { "item": "minecraft:redstone" },
+    "C": { "item": "minecraft:chest" }
+  },
+  "result": { "id": "jeg:magazine_loader" }
+}

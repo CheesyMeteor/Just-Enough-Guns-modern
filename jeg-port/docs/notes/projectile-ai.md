@@ -1,0 +1,18 @@
+# projectile-ai notes
+done: entity/projectile/ProjectileEntity.java
+- ProjectileEntity: PORT-VERIFY GunProjectileHitEvent/KillEffectEvent.Pre must be ICancellableEvent (events slice); onRemovedFromLevel rename; ClientboundExplodePacket 1.21.1 ctor + Explosion getters (getBlockInteraction/getSmallExplosionParticles/getLargeExplosionParticles/getExplosionSound); ServerPlayer.connection.latency(); CustomModelData component for ammo model.
+- ProjectileEntity: PORT-DROPPED Valkyrien Skies raycast, Superpower Allstars rubber fruit check.
+- ProjectileEntity getAddEntityPacket override removed (NeoForge handles IEntityWithComplexSpawn). Framework send method is sendToTrackingEntity (was sendToTracking).
+- done: entity/ai/GunAttackGoal, AIGunEvent (StackData, holders), TrumpetSkeletonAI (EntityTickEvent.Pre, static, @EventBusSubscriber; PORT-VERIFY event name; AT for AbstractSkeleton bowGoal/meleeGoal needed in resources slice (mojmap names)). Unchanged-OK: AIType, EntityHurtByTargetGoal, owned/*, phantom/*, TrumpetRangedAttackGoal
+done: entity/Bubble, Splash, DynamicHelmet (defineSynchedData builder, ItemStack.parse); SmokeCloud unchanged-OK
+done: projectile/ArrowProjectileEntity, BlazeProjectileEntity, BeamEntity (PORT-VERIFY GunProjectileHitEvent cancellable; Enchantments.FLAME key for flaming arrows)
+done: projectile/FlameProjectileEntity, FlareProjectileEntity (StackData for HasRaid/Raid; igniteForSeconds)
+- FlameProjectileEntity: BlockEntity#getPersistentData removed -> uses saveWithoutMetadata/loadWithComponents round-trip for "Delay". OUTSIDE SLICE: FlashlightEvent.java:197/237/246 and GunFireEvent still use getPersistentData on the DynamicLight BE; best fix = add getDelay()/setDelay() to blockentity/DynamicLightBlockEntity and use them (the round-trip needs the BE to save "Delay" in saveAdditional).
+done (unchanged-OK, reviewed): projectile/PocketBubbleEntity, ResonanceProjectileEntity, RocketEntity
+done: projectile/WhirpoolEntity (EventHooks.onExplosionStart, ClientboundExplodePacket PORT-VERIFY as in ProjectileEntity); unchanged-OK reviewed: SonicProjectileEntity, SpectreProjectileEntity, WaterProjectileEntity
+done: throwable/ThrowableItemEntity (IEntityWithComplexSpawn, OPTIONAL_STREAM_CODEC, getGravity->getDefaultGravity double; Forge entity-aware getSoundType dropped); unchanged-OK: GrenadeEntity. API change: ThrowableItemEntity#getGravity() (float) is now getDefaultGravity() (double) - subclasses elsewhere must not override getGravity
+done: throwable/* remainder: defineSynchedData(Builder) in Grenade/Molotov/PocketBubble/WaterBomb; removed no-op @Mod.EventBusSubscriber (PhantomGunnerBait); StunGrenade (@EventBusSubscriber(modid), LivingChangeTargetEvent neoforge pkg, Holder<MobEffect>, LevelLocation needs ServerLevel cast, EntityDimensions.height()); SmokeGrenade (LevelLocation cast, height()); ThrowableGrenade playSound(this,...) -> playSound(null,...) (Entity is not a Player; would not compile).
+- PORT-VERIFY: ThrowableStunGrenadeEntity LivingChangeTargetEvent#getOriginalAboutTarget name; entity.ignoreExplosion(null) (1.21.1 takes Explosion).
+- OUTSIDE SLICE: world/ProjectileExplosion.java:118 entity.ignoreExplosion() needs an Explosion arg; effect/KillEffectEffect, IncurableEffect, SmokedEffect still use ModEffects.X.get() with hasEffect (needs Holder: drop .get()).
+done: ai/AIGunEvent Delay BE round-trip (same approach as FlameProjectileEntity). Entity#getPersistentData kept (compiling port uses it on Player).
+- TrumpetSkeletonAI BANNED hit was a false positive from a comment; reworded. Verified no block placing/breaking or FOLLOW_RANGE override in entity/ai (original simple AI kept).

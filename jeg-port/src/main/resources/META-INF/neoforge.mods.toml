@@ -1,0 +1,45 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="GPL-3.0"
+
+[[mods]]
+modId="jeg"
+version="0.14.0"
+displayName="Just Enough Guns: Modern"
+authors="MigaMi"
+credits="MrCrayfish, Bomb787, NineZero"
+description='''The essentials needed for a survival friendly Gun system done the right way! (NeoForge 1.21.1 port of the original)'''
+
+[[accessTransformers]]
+file="META-INF/accesstransformer.cfg"
+
+[[mixins]]
+config="jeg.mixins.json"
+
+[[dependencies.jeg]]
+modId="neoforge"
+type="required"
+versionRange="[21.1,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.jeg]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.21.2)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.jeg]]
+modId="framework"
+type="required"
+versionRange="[0.13,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.jeg]]
+modId="geckolib"
+type="required"
+versionRange="[4.8,)"
+ordering="NONE"
+side="BOTH"

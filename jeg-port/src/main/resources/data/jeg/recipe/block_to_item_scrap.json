@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "jeg:scrap_block"
+    }
+  ],
+  "result": {
+    "id": "jeg:scrap",
+    "count": 9
+  }
+}

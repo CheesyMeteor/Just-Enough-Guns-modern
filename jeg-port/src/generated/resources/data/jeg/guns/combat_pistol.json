@@ -1,0 +1,63 @@
+{
+  "display": {
+    "flash": {
+      "size": 0.8,
+      "yOffset": 5.645,
+      "zOffset": -2.2
+    }
+  },
+  "general": {
+    "drawTimer": 10,
+    "fireMode": "jeg:semi_automatic",
+    "gripType": "jeg:one_handed",
+    "rate": 2,
+    "recoilAngle": 2.0,
+    "recoilKick": 0.33,
+    "spread": 1.5
+  },
+  "modules": {
+    "attachments": {
+      "barrel": {
+        "yOffset": 5.5,
+        "zOffset": -3.2
+      },
+      "special": {
+        "xOffset": -0.8,
+        "yOffset": 5.2
+      }
+    },
+    "zoom": {
+      "fovModifier": 0.6,
+      "yOffset": 5.135,
+      "zOffset": -1.75
+    }
+  },
+  "projectile": {
+    "advantage": "jeg:heavy",
+    "damage": 6.5,
+    "ejectsCasing": true,
+    "headshotMultiplier": 1.5,
+    "item": "jeg:pistol_ammo",
+    "life": 40,
+    "size": 0.05,
+    "speed": 15.0,
+    "trailColor": -256,
+    "trailLengthMultiplier": 2.0
+  },
+  "reloads": {
+    "additionalReloadTimer": 13,
+    "maxAmmo": 15,
+    "reloadTimer": 37,
+    "reloadType": "jeg:mag_fed"
+  },
+  "sounds": {
+    "ejectorPull": "jeg:item.combat_pistol.ejector_pull",
+    "ejectorRelease": "jeg:item.combat_pistol.ejector_release",
+    "enchantedFire": "jeg:item.combat_pistol.enchanted_fire",
+    "fire": "jeg:item.combat_pistol.fire",
+    "reloadEnd": "jeg:item.revolver.chamber_spin",
+    "reloadLoad": "jeg:item.combat_pistol.reload_mag_in",
+    "reloadStart": "jeg:item.combat_pistol.reload_mag_out",
+    "silencedFire": "jeg:item.combat_pistol.silenced_fire"
+  }
+}

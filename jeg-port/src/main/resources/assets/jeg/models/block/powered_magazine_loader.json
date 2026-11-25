@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "jeg:block/powered_magazine_loader_side",
+    "down": "jeg:block/powered_magazine_loader_bottom",
+    "up": "jeg:block/powered_magazine_loader_top",
+    "north": "jeg:block/powered_magazine_loader_front",
+    "south": "jeg:block/powered_magazine_loader_side",
+    "east": "jeg:block/powered_magazine_loader_side",
+    "west": "jeg:block/powered_magazine_loader_side"
+  }
+}

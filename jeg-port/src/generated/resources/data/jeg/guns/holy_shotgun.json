@@ -1,0 +1,69 @@
+{
+  "display": {
+    "flash": {
+      "size": 0.8,
+      "yOffset": 3.05,
+      "zOffset": -3.03
+    }
+  },
+  "general": {
+    "alwaysSpread": true,
+    "drawTimer": 20,
+    "fireMode": "jeg:semi_automatic",
+    "gripType": "jeg:two_handed",
+    "projectileAmount": 10,
+    "rate": 14,
+    "recoilAngle": 8.0,
+    "recoilKick": 0.5,
+    "spread": 8.0
+  },
+  "modules": {
+    "attachments": {
+      "barrel": {
+        "yOffset": 2.804,
+        "zOffset": -5.5
+      },
+      "scope": {
+        "yOffset": 2.97,
+        "zOffset": 5.0
+      },
+      "underBarrel": {
+        "scale": 0.0,
+        "yOffset": 1.77,
+        "zOffset": 2.125
+      }
+    },
+    "zoom": {
+      "fovModifier": 0.6,
+      "yOffset": 3.14,
+      "zOffset": -1.25
+    }
+  },
+  "projectile": {
+    "advantage": "jeg:undead",
+    "collateral": true,
+    "damage": 23.0,
+    "damageReduceOverLife": true,
+    "ejectsCasing": true,
+    "headshotMultiplier": 1.5,
+    "item": "jeg:spectre_round",
+    "life": 10,
+    "size": 0.05,
+    "speed": 8.0,
+    "trailColor": -16720641,
+    "trailLengthMultiplier": 2.0
+  },
+  "reloads": {
+    "additionalReloadTimer": 10,
+    "maxAmmo": 8,
+    "reloadTimer": 16,
+    "reloadType": "jeg:manual"
+  },
+  "sounds": {
+    "enchantedFire": "jeg:item.holy_shotgun.enchanted_fire",
+    "fire": "jeg:item.holy_shotgun.fire",
+    "reloadLoad": "jeg:item.pistol.cock",
+    "reloadStart": "jeg:item.pistol.reload",
+    "silencedFire": "jeg:item.holy_shotgun.silenced_fire"
+  }
+}

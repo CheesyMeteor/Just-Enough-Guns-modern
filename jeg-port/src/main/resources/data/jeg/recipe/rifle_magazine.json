@@ -1,0 +1,6 @@
+{
+  "type": "jeg:magazine_gated",
+  "pattern": ["G#G","G#G","GGG"],
+  "key": {"G":{"item":"jeg:gunmetal_ingot"},"#":{"item":"minecraft:iron_nugget"}},
+  "result": { "id": "jeg:rifle_magazine" }
+}

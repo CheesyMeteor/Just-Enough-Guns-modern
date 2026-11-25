@@ -1,0 +1,48 @@
+{
+  "display": {
+    "flash": {
+      "size": 0.0,
+      "yOffset": 3.7,
+      "zOffset": -4.7
+    }
+  },
+  "general": {
+    "fireMode": "jeg:semi_automatic",
+    "gripType": "jeg:one_handed",
+    "infinityDisabled": true,
+    "rate": 1,
+    "witheredDisabled": true
+  },
+  "modules": {
+    "zoom": {
+      "fovModifier": 0.6,
+      "yOffset": 3.0,
+      "zOffset": -1.75
+    }
+  },
+  "projectile": {
+    "advantage": "jeg:none",
+    "damage": 0.0,
+    "headshotMultiplier": 1.5,
+    "hideTrail": true,
+    "item": "minecraft:air",
+    "life": 80,
+    "size": 0.05,
+    "speed": 20.0,
+    "trailColor": -256,
+    "trailLengthMultiplier": 0.0
+  },
+  "reloads": {
+    "additionalReloadTimer": 0,
+    "maxAmmo": 1,
+    "reloadTimer": 20,
+    "reloadType": "jeg:inventory_fed"
+  },
+  "sounds": {
+    "enchantedFire": "jeg:item.finger_gun",
+    "fire": "jeg:item.finger_gun",
+    "reloadLoad": "jeg:item.pistol.cock",
+    "reloadStart": "jeg:item.pistol.reload",
+    "silencedFire": "jeg:item.finger_gun"
+  }
+}

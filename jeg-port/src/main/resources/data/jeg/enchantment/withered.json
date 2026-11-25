@@ -1,0 +1,20 @@
+{
+  "description": {
+    "translate": "enchantment.jeg.withered"
+  },
+  "supported_items": "#jeg:enchantable/gun",
+  "weight": 1,
+  "max_level": 10,
+  "min_cost": {
+    "base": 15,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 25,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 8,
+  "slots": [
+    "mainhand"
+  ]
+}

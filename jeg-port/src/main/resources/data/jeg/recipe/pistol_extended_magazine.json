@@ -1,0 +1,5 @@
+{
+  "type": "jeg:magazine_gated_shapeless",
+  "ingredients": [{"item":"jeg:pistol_magazine"},{"item":"jeg:gunmetal_ingot"},{"item":"jeg:gunmetal_ingot"}],
+  "result": { "id": "jeg:pistol_extended_magazine" }
+}

@@ -1,0 +1,88 @@
+plugins {
+    id 'java-library'
+    id 'idea'
+    id 'net.neoforged.moddev' version '2.0.123'
+}
+
+version = "${mod_version}-1.21.1"
+group = mod_group_id
+
+base {
+    archivesName = 'JEGM'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroupByRegex("software\\.bernie.*")
+            includeGroup("com.eliotlash.mclib")
+        }
+    }
+}
+
+neoForge {
+    version = project.neo_version
+
+    parchment {
+        mappingsVersion = project.parchment_mappings_version
+        minecraftVersion = project.parchment_minecraft_version
+    }
+
+    def atFile = file('src/main/resources/META-INF/accesstransformer.cfg')
+    if (atFile.exists()) {
+        accessTransformers = project.files(atFile)
+    }
+
+    runs {
+        client {
+            client()
+        }
+        server {
+            server()
+            programArgument '--nogui'
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+// Committed datagen output lives in src/generated/resources
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
+}
+
+dependencies {
+    implementation "software.bernie.geckolib:geckolib-neoforge-1.21.1:${geckolib_version}"
+
+    // MrCrayfish's Framework: copy the jar from your mods folder into ./libs
+    implementation files("libs/${framework_jar}")
+
+    // Mixin + MixinExtras are provided by the NeoForge dev classpath (no annotation processor needed).
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.compilerArgs += ['-Xmaxerrs', '2000']
+}
+
+tasks.withType(ProcessResources).configureEach {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}

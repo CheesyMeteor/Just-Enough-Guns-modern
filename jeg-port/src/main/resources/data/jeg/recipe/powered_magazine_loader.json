@@ -1,0 +1,16 @@
+{
+  "type": "jeg:magazine_gated",
+  "pattern": [
+    "GCG",
+    "FLR",
+    "GCG"
+  ],
+  "key": {
+    "G": { "item": "jeg:gunnite_ingot" },
+    "C": { "item": "jeg:circuit_board" },
+    "F": { "item": "minecraft:furnace" },
+    "L": { "item": "jeg:magazine_loader" },
+    "R": { "item": "minecraft:redstone_block" }
+  },
+  "result": { "id": "jeg:powered_magazine_loader" }
+}
